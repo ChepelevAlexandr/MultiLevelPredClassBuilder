@@ -1,27 +1,27 @@
 # Multi-Level Predicate Class Builder (Python)
 
-Python-реализация алгоритма Косовской для построения многоуровневого описания классов на языке предикатов.
+Python-СЂРµР°Р»РёР·Р°С†РёСЏ Р°Р»РіРѕСЂРёС‚РјР° РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РјРЅРѕРіРѕСѓСЂРѕРІРЅРµРІРѕРіРѕ РѕРїРёСЃР°РЅРёСЏ РєР»Р°СЃСЃРѕРІ РЅР° СЏР·С‹РєРµ РїСЂРµРґРёРєР°С‚РѕРІ.
 
-## Структура проекта
+## РЎС‚СЂСѓРєС‚СѓСЂР° РїСЂРѕРµРєС‚Р°
 
-- `ml_builder.py`       — точка входа (main)
-- `parser.py`           — чтение и парсинг `classes_list.txt`, `classK.txt` и `scene.txt`
-- `unifier.py`          — функции унификации `literal`-ов и списков `literal`-ов
-- `utils.py`            — общие утилиты и константы (комбинации, пороги)
-- `subformula.py`       — класс `Subformula`
-- `level_finder.py`     — реализация `extract_level`
-- `selector.py`         — реализация `select_and_register_predicates`
-- `matcher.py`          — `find_all_matches` и `build_objects_at_level`
-- `output_writer.py`    — сохранение `level*_objects.txt` и `final_descriptions.txt`
+- `ml_builder.py`       вЂ” С‚РѕС‡РєР° РІС…РѕРґР° (main)
+- `parser.py`           вЂ” С‡С‚РµРЅРёРµ Рё РїР°СЂСЃРёРЅРі `classes_list.txt`, `classK.txt` Рё `scene.txt`
+- `unifier.py`          вЂ” С„СѓРЅРєС†РёРё СѓРЅРёС„РёРєР°С†РёРё `literal`-РѕРІ Рё СЃРїРёСЃРєРѕРІ `literal`-РѕРІ
+- `utils.py`            вЂ” РѕР±С‰РёРµ СѓС‚РёР»РёС‚С‹ Рё РєРѕРЅСЃС‚Р°РЅС‚С‹ (РєРѕРјР±РёРЅР°С†РёРё, РїРѕСЂРѕРіРё)
+- `subformula.py`       вЂ” РєР»Р°СЃСЃ `Subformula`
+- `level_finder.py`     вЂ” СЂРµР°Р»РёР·Р°С†РёСЏ `extract_level`
+- `selector.py`         вЂ” СЂРµР°Р»РёР·Р°С†РёСЏ `select_and_register_predicates`
+- `matcher.py`          вЂ” `find_all_matches` Рё `build_objects_at_level`
+- `output_writer.py`    вЂ” СЃРѕС…СЂР°РЅРµРЅРёРµ `level*_objects.txt` Рё `final_descriptions.txt`
 
-## Запуск
+## Р—Р°РїСѓСЃРє
 
-1. Поместить в корень проекта файлы:
-   - `classes_list.txt` (список путей к `class1.txt`, `class2.txt`, …)
-   - Каждый `classK.txt` (по строке: `P(x,a)&Q(a,b)&...`)
-   - `scene.txt` (по строке: `P(c,a)`, `Q(d,e)`, …)
+1. РџРѕРјРµСЃС‚РёС‚СЊ РІ РєРѕСЂРµРЅСЊ РїСЂРѕРµРєС‚Р° С„Р°Р№Р»С‹:
+   - `classes_list.txt` (СЃРїРёСЃРѕРє РїСѓС‚РµР№ Рє `class1.txt`, `class2.txt`, вЂ¦)
+   - РљР°Р¶РґС‹Р№ `classK.txt` (РїРѕ СЃС‚СЂРѕРєРµ: `P(x,a)&Q(a,b)&...`)
+   - `scene.txt` (РїРѕ СЃС‚СЂРѕРєРµ: `P(c,a)`, `Q(d,e)`, вЂ¦)
 
-2. Выполнить (внутри каталога `ml_pred_classes/`):
+2. Р’С‹РїРѕР»РЅРёС‚СЊ (РІРЅСѓС‚СЂРё РєР°С‚Р°Р»РѕРіР° `ml_pred_classes/`):
 
    ```bash
    python ml_builder.py classes_list.txt scene.txt

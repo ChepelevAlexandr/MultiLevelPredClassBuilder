@@ -1,0 +1,5 @@
+/mnt/data/exp4_dataset/class1.txt
+/mnt/data/exp4_dataset/class2.txt
+/mnt/data/exp4_dataset/class3.txt
+/mnt/data/exp4_dataset/class4.txt
+/mnt/data/exp4_dataset/class5.txt
